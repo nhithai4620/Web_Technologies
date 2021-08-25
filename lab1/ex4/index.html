@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <style>
@@ -12,10 +13,11 @@
         body{
             margin: 0 auto;
             padding: 0;
-            width: 40%;
+            
         }
         .container{
             padding: 100px;
+            width: 40%;
         }
 
        .title{
@@ -26,8 +28,14 @@
            border: 2px solid rgba(60, 60, 250, 0.993);
        }
 
-       .input-group-text{
+       .width-input{
            width: 100px;
+       }
+
+       .Inline-container{
+           width: 80%;
+           margin: 0 auto;
+           padding-bottom: 100px;
        }
 
     </style>
@@ -61,23 +69,23 @@
     </div>
     <div class="container">
         <div class="card">
-            <article class="card-body">
+            <article class="card-body ">
                 <p class="title">Biểu mẫu đăng nhập</p>
                 <hr>
                 <br>
                 <form>
-                <div class="form-group">
-                <div class="input-group">
+                <div class="form-group ">
+                <div class="input-group ">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"> Email: </span>
+                        <span class="input-group-text width-input"> Email: </span>
                      </div>
                     <input name="" class="form-control" placeholder="Nhập vào email" type="email">
                 </div> <!-- input-group.// -->
                 </div> <!-- form-group// -->
-                <div class="form-group">
+                <div class="form-group ">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text"> Password: </span>
+                        <span class="input-group-text width-input"> Password: </span>
                      </div>
                     <input class="form-control" placeholder="Nhập vào mật khẩu" type="password">
                 </div> <!-- input-group.// -->
@@ -91,6 +99,39 @@
             </article>
         </div>
     </div>
+    <div class="Inline-container">
+        <div class="card">
+            <article class="card-body">
+                <p class="title">Biểu mẫu đăng nhập</p>
+                <hr>
+                <form class="row">
+                <div class="form-group col-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class=" input-group-text  btn-success"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input name="" class="form-control" placeholder="Nhập vào email" type="email">
+                </div> <!-- input-group.// -->
+                </div> <!-- form-group// -->
+                <div class="form-group col-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class=" input-group-text btn-danger" > <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input class="form-control" placeholder="Nhập vào mật khẩu" type="password">
+                </div> <!-- input-group.// -->
+                </div> <!-- form-group// -->
+                <label class="col-2"> <input type="checkbox"> Ghi nhớ tôi </label>
+                <div class="form-group col-2">
+                <button type="submit" class="btn btn-primary btn-block"> Đăng nhập </button>
+                </div> <!-- form-group// -->
+                </form>
+            </article>
+        </div> <!-- card.// -->
+    </div>
+
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
