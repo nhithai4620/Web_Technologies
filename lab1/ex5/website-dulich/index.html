@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Grid Template for Bootstrap</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -59,6 +60,18 @@
             margin-top: 200px;
             text-align: center;
     
+        }
+        .footer-dark{
+            padding: 50px;
+            background-color: rgb(65, 129, 240);
+        }
+
+        .footer-dark li{
+            
+        }
+        .footer-dark a{
+            list-style: none;
+            color: #fff;
         }
 
     </style>
@@ -135,18 +148,37 @@
         
     </div>
     <hr/>
-    <footer>
-        <div>
-            <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Dịch vụ</a></li>
-                <li><a href="#">Về chúng tôi</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </div>
-    </footer>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Dịch vụ</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Thông tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3> Công ty Du lịch Bụi.</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                </div>
+    
+            </div>
+        </footer>
+     </div>
+     
 </body>
 
 </html>
