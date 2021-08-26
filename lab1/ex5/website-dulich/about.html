@@ -4,38 +4,89 @@
 <head>
     <meta charset="utf-8">
     <title>Grid Template for Bootstrap</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+         .navbar-collapse{
+            width: 100%;
+        }
+        .navbar-nav{
+            width: 100%;
+            margin-left: 100px ;
+
+        }
+        .navbar-collapse a{
+            padding: 10px;
+            margin-left: 20px;
+        }
+        .jumbotron{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <h1><img src="img/logo.jpg"/></h1>
-    <div>
-        <a href="#">Trang chủ</a>
-        <a href="#">Dịch vụ</a>
-        <a href="#">Về chúng tôi</a>
-        <a href="#">FAQ</a>
-        <a href="#">Liên hệ</a>
-    </div>
-    <hr/>
-    <h2>Về chúng tôi</h2>
-    <hr/>
-    <img alt="ve-chung-toi" src="img/aboutus.jpg" />
-    <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-    </div>
-    <hr/>
-    <footer>
-        <div>
-            <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Dịch vụ</a></li>
-                <li><a href="#">Về chúng tôi</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <h1><img src="img/logo.jpg"/></h1>
+            </div>
+                
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Trang chủ</a>
+                    <a class="nav-link" href="./service.html">Dịch vụ</a>
+                    <a class="nav-link" href="./about.html">Về chúng tôi</a>
+                    <a class="nav-link" href="./faq.html">FAQ</a>
+                    <a class="nav-link" href="./contact.html">Liên hệ</a>
+                </div>
+            </div>
         </div>
-    </footer>
+    </nav>
+    <hr/>
+    <div class="jumbotron jumbotron-fluid">
+        <h2>Về chúng tôi</h2>
+        <hr/>
+        <img alt="ve-chung-toi" src="img/aboutus.jpg" />
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>   
+    </div>
+    
+    <hr/>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Dịch vụ</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Thông tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3> Công ty Du lịch Bụi.</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                </div>
+    
+            </div>
+        </footer>
+     </div>
 </body>
 
 </html>

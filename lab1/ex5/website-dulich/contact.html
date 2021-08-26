@@ -4,58 +4,193 @@
 <head>
     <meta charset="utf-8">
     <title>Grid Template for Bootstrap</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        /*
+** Style Simple Ecommerce Theme for Bootstrap 4
+** Created by T-PHP https://t-php.fr/43-theme-ecommerce-bootstrap-4.html
+*/
+        .bloc_left_price {
+            color: #c01508;
+            text-align: center;
+            font-weight: bold;
+            font-size: 150%;
+        }
+        .category_block li:hover {
+            background-color: #007bff;
+        }
+        .category_block li:hover a {
+            color: #ffffff;
+        }
+        .category_block li a {
+            color: #343a40;
+        }
+        .add_to_cart_block .price {
+            color: #c01508;
+            text-align: center;
+            font-weight: bold;
+            font-size: 200%;
+            margin-bottom: 0;
+        }
+        .add_to_cart_block .price_discounted {
+            color: #343a40;
+            text-align: center;
+            text-decoration: line-through;
+            font-size: 140%;
+        }
+        .product_rassurance {
+            padding: 10px;
+            margin-top: 15px;
+            background: #ffffff;
+            border: 1px solid #6c757d;
+            color: #6c757d;
+        }
+        .product_rassurance .list-inline {
+            margin-bottom: 0;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .product_rassurance .list-inline li:hover {
+            color: #343a40;
+        }
+        .reviews_product .fa-star {
+            color: gold;
+        }
+        .pagination {
+            margin-top: 20px;
+        }
+        .footer-dark{
+            padding: 50px;
+            background-color: rgb(65, 129, 240);
+        }
+
+        .footer-dark li{
+            
+        }
+        .footer-dark a{
+            list-style: none;
+            color: #fff;
+        }
+        .navbar-collapse{
+            width: 100%;
+        }
+        .navbar-nav{
+            width: 100%;
+            margin-left: 100px ;
+
+        }
+        .navbar-collapse a{
+            padding: 10px;
+            margin-left: 20px;
+        }
+
+    </style>
 </head>
 
 <body>
-    <h1><img src="img/logo.jpg"/></h1>
-    <div>
-        <a href="#">Trang chủ</a>
-        <a href="#">Dịch vụ</a>
-        <a href="#">Về chúng tôi</a>
-        <a href="#">FAQ</a>
-        <a href="#">Liên hệ</a>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="navbar-brand">
+            <h1><img src="img/logo.jpg"/></h1>
+        </div>
+            
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="./index.html">Trang chủ</a>
+                <a class="nav-link" href="./service.html">Dịch vụ</a>
+                <a class="nav-link" href="./about.html">Về chúng tôi</a>
+                <a class="nav-link" href="./faq.html">FAQ</a>
+                <a class="nav-link" href="./contact.html">Liên hệ</a>
+            </div>
+        </div>
     </div>
-    <hr/>
-    <div>
-        <h3>Liên hệ với chúng tôi!</h3>
-        <p>Chúng tôi mong muốn lắng nghe từ bạn. Hãy liên hệ với chúng tôi và một thành viên của chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất. Chúng tôi yêu thích việc nhận được email của bạn mỗi ngày <em>mỗi ngày</em>.</p>
-        <form>
-            <label for="name">Tên của bạn</label>
-            <input type="text" placeholder="Tên của bạn" />
-            <label for="email">Email của bạn</label>
-            <input type="email" placeholder="Email của bạn" />
-            <label>Nội dung</label>
-            <textarea rows="3"></textarea>
-        </form>
+</nav>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Công ty du lịch BỤI</h1>
+        <p class="lead text-muted mb-0">Hãy liên hệ với chúng tôi !</p>
     </div>
-    <div>
-        <h5>Bản đồ</h5>
-        <p>
-            <a href="#">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15729855.42909206!2d96.7382165931671!3d15.735434000981483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31157a4d736a1e5f%3A0xb03bb0c9e2fe62be!2zVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1445179448264" width="200" height="200" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                <br />
-            </a>
-            <br />
-            <a href="#">Xem bản đồ</a>
-        </p>
-        <p>
-            Đại chỉ 1.
-            <br /> Địa chỉ 2.
-        </p>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header bg-primary text-white"><i class="fa fa-envelope"></i> Contact us.
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="6" required></textarea>
+                        </div>
+                        <div class="mx-auto">
+                        <button type="submit" class="btn btn-primary text-right">Submit</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header bg-success text-white text-uppercase"><i class="fa fa-home"></i> Address</div>
+                <div class="card-body">
+                    <p>3 rue des Champs Elysées</p>
+                    <p>75008 PARIS</p>
+                    <p>France</p>
+                    <p>Email : email@example.com</p>
+                    <p>Tel. +33 12 56 11 51 84</p>
+
+                </div>
+
+            </div>
+        </div>
     </div>
-    <hr/>
+</div>
+
+<!-- Footer -->
+<div class="footer-dark">
     <footer>
-        <div>
-            <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Dịch vụ</a></li>
-                <li><a href="#">Về chúng tôi</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Dịch vụ</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Thông tin</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3> Công ty Du lịch Bụi.</h3>
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                </div>
+            </div>
+
         </div>
     </footer>
+ </div>
 </body>
 
 </html>

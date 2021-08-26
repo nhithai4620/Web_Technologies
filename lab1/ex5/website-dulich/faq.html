@@ -4,49 +4,98 @@
 <head>
     <meta charset="utf-8">
     <title>Grid Template for Bootstrap</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+         .navbar-collapse{
+            width: 100%;
+        }
+        .navbar-nav{
+            width: 100%;
+            margin-left: 100px ;
+
+        }
+        .navbar-collapse a{
+            padding: 10px;
+            margin-left: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1><img src="img/logo.jpg"/></h1>
-    <div>
-        <a href="#">Trang chủ</a>
-        <a href="#">Dịch vụ</a>
-        <a href="#">Về chúng tôi</a>
-        <a href="#">FAQ</a>
-        <a href="#">Liên hệ</a>
-    </div>
-    <hr/>
-    <h2>FAQ</h2>
-    <hr/>    
-    <div>
-        <p>1. Tôi có thể trả tiền thông qua PayPal?</p>
-        <p>Được. Chúng tôi chấp nhận việc chi trả qua PayPal.</p>
-    </div> 
-    <div>
-        <p>2. Tôi có thể hủy bỏ đặt hàng?</p>
-        <p>Được. Bạn có thể hủy bỏ đặt hàng bất khi nào bạn muốn.</p>
-    </div> 
-    <div>
-        <p>3. Chính sách hoàn tiền như thế nào?</p>
-        <p>Bạn có thể nhận được tiền hoàn trả 100% bất kể khi nào và vì bất kỳ lý do gì.</p>
-    </div> 
-    <div>
-        <p>4. Làm thế nào để tôi có thể nhận được hóa đơn?</p>
-        <p>Bạn có thể nhận được hóa đơn thông qua email hoặc thư tín.</p>
-    </div>        
-    <hr/>
-    <footer>
-        <div>
-            <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Dịch vụ</a></li>
-                <li><a href="#">Về chúng tôi</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <h1><img src="img/logo.jpg"/></h1>
+            </div>
+                
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Trang chủ</a>
+                    <a class="nav-link" href="./service.html">Dịch vụ</a>
+                    <a class="nav-link" href="./about.html">Về chúng tôi</a>
+                    <a class="nav-link" href="./faq.html">FAQ</a>
+                    <a class="nav-link" href="./contact.html">Liên hệ</a>
+                </div>
+            </div>
         </div>
-    </footer>
+    </nav>
+    <hr/>
+    <div class="container">
+        <h2>FAQ</h2>
+        <div>
+            <p>1. Tôi có thể trả tiền thông qua PayPal?</p>
+            <p>Được. Chúng tôi chấp nhận việc chi trả qua PayPal.</p>
+        </div> 
+        <div>
+            <p>2. Tôi có thể hủy bỏ đặt hàng?</p>
+            <p>Được. Bạn có thể hủy bỏ đặt hàng bất khi nào bạn muốn.</p>
+        </div> 
+        <div>
+            <p>3. Chính sách hoàn tiền như thế nào?</p>
+            <p>Bạn có thể nhận được tiền hoàn trả 100% bất kể khi nào và vì bất kỳ lý do gì.</p>
+        </div> 
+        <div>
+            <p>4. Làm thế nào để tôi có thể nhận được hóa đơn?</p>
+            <p>Bạn có thể nhận được hóa đơn thông qua email hoặc thư tín.</p>
+        </div>   
+    </div>
+   
+    <hr/>    
+         
+    <hr/>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Dịch vụ</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Thông tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3> Công ty Du lịch Bụi.</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                </div>
+    
+            </div>
+        </footer>
+     </div>
 </body>
 
 </html>
