@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Bài tập 6.1</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style type="text/css">
     /* This puts titles always on a separate line from thumbnails */
     
@@ -35,7 +36,6 @@
     $(document).ready(function(){
 
         var addVideoToList = function(video) {
-
             var videoLink = $('<a>');
             videoLink.append(video.title);
             var thumbnailUrl = youtube.generateThumbnailUrl(video.youtubeId);
@@ -67,6 +67,12 @@
         };
 
         // Viết mã lệnh tại đây
+        $.getJSON('./videos.json', (data) => {
+            data.forEach(function(item){
+                addVideoToList(item);
+            })
+      
+        });
         
     });
     </script>
