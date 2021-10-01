@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bài tập 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        img{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="page-header">Các đoạn phim hay nhất</h2>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+              <ul>
+                  <li><a class="linkVideo" href="https://www.youtube.com/watch?v=TddFnTB_7IM">Trip through the 80s</a></li>
+                  <li><a class="linkVideo" href="https://www.youtube.com/watch?v=epUk3T2Kfno">Otters Holding Hands</a></li>
+                  <li><a class="linkVideo" href="https://www.youtube.com/watch?v=il2IrgFHfsg">The Ooooh Cattttttt</a></li>
+              </ul>
+          </div>
+        </div>
+        
+    </div>
+
+    <script src="youtube.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        var videoLinks = $(".linkVideo");
+        for ( var i = 0; i < videoLinks.length; i++){
+            var linkURL = $(videoLinks[i]).attr("href");
+            var thumbnailURL = youtube.generateThumbnailUrl(linkURL);
+            var thumbnailImg = document.createElement('img');
+            $(thumbnailImg).attr('src',thumbnailURL);
+            $(videoLinks[i]).after(thumbnailImg);
+        }
+    </script>
+
+</body>
+
+</html>
+

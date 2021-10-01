@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bài tập 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <style>
+        img{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="page-header">Các đoạn phim hay nhất</h2>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-3">
+                <ul>
+                    <li><a class="linkVideo" href="https://www.youtube.com/watch?v=iB1JpqaYPRY">Trip through the 80s</a></li>
+                    <li><a class="linkVideo" href="https://www.youtube.com/watch?v=Hi_22UXeP40">Otters Holding Hands</a></li>
+                    <li><a class="linkVideo" href="https://www.youtube.com/watch?v=IDksv0Z-dTk">The Ooooh Cattttttt</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9" id="showvideo"></div>
+        </div>
+        
+    </div>
+
+    <script src="youtube.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        var videoLinks = $(".linkVideo");
+        for ( var i = 0; i < videoLinks.length; i++){
+            var linkURL = $(videoLinks[i]).attr("href");
+            var thumbnailURL = youtube.generateThumbnailUrl(linkURL);
+            var thumbnailImg = document.createElement('img');
+            $(thumbnailImg).attr('src',thumbnailURL);
+            $(videoLinks[i]).after(thumbnailImg);
+        }
+
+        $("a").click(function(e){
+            e.preventDefault();
+            $("#showvideo").empty();
+            var IframeVideo = document.createElement('iframe');
+            var linkURL = $(e.target).attr("href");
+            var videosrc = youtube.generateEmbedUrl(linkURL);
+            $(IframeVideo).attr('src',videosrc);
+            $(IframeVideo).attr('width',420);
+            $(IframeVideo).attr('height',345);
+            $("#showvideo").append(IframeVideo);
+            $("#showvideo").fadeIn(3000);
+        });
+
+
+    </script>
+
+</body>
+
+</html>
+

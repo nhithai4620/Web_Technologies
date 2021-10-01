@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bài tập 4.2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<script src="jquery.validate.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div class="page-header">
+					<div class="alert alert-info" role="alert">
+						<h4>Bài tập 4.2: jQuery Validation Plugin.</h4>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Đăng ký thành viên</h3>
+					</div>
+					<div class="panel-body">
+						<form method="post" class="form-horizontal" action="" id="signupForm">
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="fisrtname">Tên của bạn</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" placeholder="Tên của bạn" id="firstname" name="firstname"  />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Họ của bạn</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" placeholder="Họ của bạn" id="lastname" name="lastname"/>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="username">Tên đăng nhập</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" placeholder="Tên đăng nhập" id="username" name="username" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="email">Hộp thư điện tử</label>
+								<div class="col-sm-5">
+									<input type="email" class="form-control" placeholder="Hộp thư điện tử" id="email" name="email" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="password">Mật khẩu</label>
+								<div class="col-sm-5">
+									<input type="password" class="form-control" placeholder="Mật khẩu" id="password" name="password"/>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="confirm_password">Nhập lại mật khẩu</label>
+								<div class="col-sm-5">
+									<input type="password" class="form-control" placeholder="Nhập lại mật khẩu" id="confirm_password" name="confirm_password" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-6 col-sm-offset-4">
+									<div class="checkbox">
+										<label for="agree">
+											<input type="checkbox" value="agree" id="agree" name="agree"/>Đồng ý các quy định của chúng tôi
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-9 col-sm-offset-4">
+									<button type="submit" class="btn btn-primary" value="Sign up" id="signup" name="signup">Đăng ký</button>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div> <!-- Cột nội dung -->
+		</div> <!-- Dòng nội dung -->
+	</div> <!-- Container -->
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.validate.js"></script>
+
+	<script type="text/javascript">
+		$.validator.setDefaults( {
+			submitHandler: function () {
+				alert( "submitted!" );
+			}
+		});
+
+		$( document ).ready( function () {
+			// Thêm mã lệnh tại đây
+			$("#signupForm").validate({
+			rules: {
+				firstname: "required",
+				lastname: "required",
+				username: {
+					required: true,
+					minlength: 2
+				},
+				password: {
+					required: true,
+					minlength: 5
+				},
+				confirm_password: {
+					required: true,
+					minlength: 5,
+					equalTo: "#password"
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				topic: {
+					required: "#newsletter:checked",
+					minlength: 2
+				},
+				agree: "required"
+			},
+			messages: {
+				firstname: "Please enter your firstname",
+				lastname: "Please enter your lastname",
+				username: {
+					required: "Please enter a username",
+					minlength: "Your username must consist of at least 2 characters"
+				},
+				password: {
+					required: "Please provide a password",
+					minlength: "Your password must be at least 5 characters long"
+				},
+				confirm_password: {
+					required: "Please provide a password",
+					minlength: "Your password must be at least 5 characters long",
+					equalTo: "Please enter the same password as above"
+				},
+				email: "Please enter a valid email address",
+				agree: "Please accept our policy",
+				topic: "Please select at least 2 topics"
+			}
+		});
+		} );
+	</script>
+</body>
+</html>
